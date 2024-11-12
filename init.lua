@@ -618,7 +618,9 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
+        csharp_ls = {},
+        bashls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -658,6 +660,12 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        -- additional python dev tools
+        --'black',
+        --'debugpy',
+        --'flake8',
+        --'mypy',
+        --'pylint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
