@@ -157,6 +157,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Column markers to avoid writing too large lines
+vim.api.nvim_set_option_value('colorcolumn', '80,120', {})
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
