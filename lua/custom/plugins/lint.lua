@@ -11,6 +11,7 @@ return {
           'ruff',
           'prettier',
           'shfmt',
+          'mypy'
         },
         automatic_installation = true,
       }
@@ -21,6 +22,7 @@ return {
         require 'none-ls.formatting.ruff_format',
         null_ls.builtins.formatting.prettier.with { filetypes = { 'json', 'yaml', 'markdown' } },
         null_ls.builtins.formatting.shfmt.with { args = { '-i', '4' } },
+        null_ls.builtins.diagnostics.mypy -- use extra_args instead of args if needed.
       }
 
       local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
