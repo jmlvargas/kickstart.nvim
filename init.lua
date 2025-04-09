@@ -629,6 +629,13 @@ require('lazy').setup({
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
             end, '[T]oggle Inlay [H]ints')
           end
+
+          -- jv: Map to format a document
+          if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_formatting, event.buf) then
+            map('<leader>df', function()
+              vim.lsp.buf.format()
+            end, '[D]ocument [F]ormat')
+          end
         end,
       })
 
