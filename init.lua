@@ -848,7 +848,7 @@ require('lazy').setup({
       local blink_capabilities = require('blink.cmp').get_lsp_capabilities()
       local lspconfig = require('lspconfig')
       lspconfig.lua_ls.setup { capabilities = blink_capabilities }
-      lspconfig.py_ls.setup { capabilities = blink_capabilities }
+      lspconfig.pylsp.setup { capabilities = blink_capabilities }
 
 
     end,
