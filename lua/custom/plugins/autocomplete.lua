@@ -34,10 +34,30 @@ return {
         -- Adjusts spacing to ensure icons are aligned
         nerd_font_variant = 'mono'
       },
-      signature = { enabled = true },
+      signature = {
+        enabled = true,
+        window = { border = 'single' }
+      },
 
       -- (Default) Only show the documentation popup when manually triggered
-      completion = { documentation = { auto_show = false } },
+      completion = {
+        menu = {
+          border = 'single',
+          auto_show = true
+        },
+        ghost_text = {
+          enabled = false,
+          show_with_menu = false,
+        },
+        documentation = {
+          auto_show = false,
+          treesitter_highlighting = true,
+          update_delay_ms = 300,
+          window = {
+            border = 'single'
+          }
+        }
+      },
 
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
