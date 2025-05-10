@@ -46,7 +46,7 @@ return {
           auto_show = false,
         },
         ghost_text = {
-          enabled = true,
+          enabled = false,
           show_with_menu = false,
         },
         documentation = {
@@ -62,7 +62,7 @@ return {
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets' } -- , 'buffer' }, I don't whant buffer.
       },
 
       -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
